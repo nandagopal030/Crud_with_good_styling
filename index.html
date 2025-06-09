@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-LocalStroge</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- filter Icon -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    
+</head>
+<body>
+   <!-- Add Data Modal -->
+<div class="addModal" id="addModal">
+  <div class="addModal-contents">
+    <span class="closeAddBtn">&times;</span>
+    <h1>Add New User</h1>
+    <form id="dataForm">
+      <label for="nameInput">Name:</label>
+      <input type="text" id="nameInput" />
+
+      <label for="ageInput">Age:</label>
+      <input type="number" id="ageInput" />
+
+      <label for="genderSelect">Gender:</label>
+      <select id="genderSelect">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <button type="submit">Add</button>
+    </form>
+  </div>
+</div>
+
+          
+ <div class="container">
+        <div id="output">
+            <h2>ADD DATA</h2>
+             <button type="submit" class="btnAdd">Add Data</button>
+            <input type="hidden" id="editIndex">
+            <h2>Stored Data:</h2>
+              <div id="searchBox">
+             <!-- <label for="searchInput">Search Name:</label> -->
+             <input type="text" id="searchInput" placeholder="Enter name to search">
+             <button id="searchButton">Search</button>
+             <p id="searchResult"></p>
+           </div>
+
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Name <span class="material-symbols-outlined" data-field="name">filter_list</span></th>   
+                        <th>Age <span class="material-symbols-outlined" data-field="age">filter_list</span></th>
+                        <th>Gender <span class="material-symbols-outlined" data-field="gender">filter_list</span></th>
+                        <th>Edit </th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="dataList">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times</span>
+            <h2>Edit Data</h2>
+              <form id="editForm">
+            <label for="editNameInput">Name: </label>
+            
+            <input type="text" id = "editNameInput">
+            
+            <label for="editAgeInput">Age:</label>
+            <input type="number"  id="editAgeInput">
+
+            <label for="editGenderSelect" > Gender:</label>
+            <select  id="editGenderSelect">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <button type="submit">Save Changes</button>
+        </form>
+        </div>
+
+    </div>
+     
+     <script src="script.js"></script>
+</body>
+</html>
